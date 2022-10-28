@@ -151,11 +151,55 @@ nav,
   }
 }
 
+/* avatar title is reused in different components, therefore is a generic class */
+
+.avatar-title img {
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.avatar-title h4 {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 700;
+}
+.avatar-title h4 .in {
+  color: rgba(117, 117, 117, 1);
+}
+
+/* ...same for bottom-info */
+
+.bottom-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-info span {
+  color: rgba(117, 117, 117, 1);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.bottom-info .dot {
+  padding-inline: 0.25rem;
+}
+
+.badge {
+  color: rgba(117, 117, 117, 1);
+  background-color: rgba(242, 242, 242, 1);
+  padding: 2px 8px;
+  border-radius: 100px;
+  line-height: 20px;
+  font-size: 13px;
+}
+
 section.trending {
   padding-top: 40px;
   padding-bottom: 16px;
-  min-height: 180vh;
 }
+
 section.trending .trending-title-section {
   margin-bottom: 10px;
 }
@@ -198,31 +242,84 @@ section.trending .col .num {
   line-height: 1;
 }
 
-section.trending .content img {
-  object-fit: cover;
-  border-radius: 50%;
-  margin-right: 0.5rem;
-}
-
-section.trending .content h4 {
-  font-size: 13px;
-  line-height: 16px;
-  font-weight: 700;
-}
-section.trending .content h4 .in {
-  color: rgba(117, 117, 117, 1);
-}
-
 section.trending .content h2 {
   font-weight: 900;
   margin-block: 10px;
 }
 
-section.trending .content .bottom-info span {
-  color: rgba(117, 117, 117, 1);
-  font-size: 13px;
-  line-height: 20px;
+section.wall {
+  padding-top: 56px;
+  border-top: 1px solid rgba(230, 230, 230, 1);
 }
-section.trending .content .bottom-info .dot {
-  padding-inline: 0.25rem;
+
+section.wall .grid {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 8.333%;
+}
+
+section.wall .grid > .col-main {
+  min-height: 30px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 58.333%;
+  width: 58.333%;
+  min-height: 200vh;
+}
+
+section.wall .grid > aside {
+  min-height: 30px;
+  position: sticky;
+  top: 75px;
+}
+
+section.wall .grid > aside h4 {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+section.wall .card {
+  display: flex;
+  column-gap: 28px;
+  margin-bottom: 48px;
+}
+
+section.wall .card .content {
+  flex: 1;
+}
+
+section.wall .card .content + img {
+  width: 200px;
+}
+
+section.wall .card .avatar-title {
+  padding-bottom: 8px;
+}
+
+section.wall .card h3 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 900;
+}
+
+section.wall .card p {
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 3px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: rgba(117, 117, 117, 1);
+}
+
+section.wall .card .bottom-info {
+  padding-top: 8px;
+}
+
+section.wall .card img[src$="star.svg"] {
+  margin-left: 0.25rem;
 }
