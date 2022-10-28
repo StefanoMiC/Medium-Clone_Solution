@@ -270,7 +270,7 @@ section.wall .grid > .col-main {
 section.wall .grid > aside {
   min-height: 30px;
   position: sticky;
-  top: 75px;
+  top: 110px;
 }
 
 section.wall .grid > aside h4 {
@@ -322,4 +322,46 @@ section.wall .card .bottom-info {
 
 section.wall .card img[src$="star.svg"] {
   margin-left: 0.25rem;
+}
+
+aside h4 {
+  margin-bottom: 16px;
+}
+
+aside .categories {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 24px;
+}
+
+aside .categories .category {
+  font-size: 13px;
+  line-height: 20px;
+  padding: 6px 16px;
+  border: 1px solid rgba(230, 230, 230, 1);
+  color: rgba(117, 117, 117, 1);
+  letter-spacing: 0.25px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  border-radius: 2px;
+}
+
+aside footer {
+  padding-top: 24px;
+  border-top: 1px solid rgba(230, 230, 230, 1);
+}
+aside footer ul {
+  list-style: none;
+}
+
+aside footer ul li {
+  display: inline-block;
+  margin-right: 24px;
+  margin-bottom: 8px;
+}
+aside footer li a {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(117, 117, 117, 1);
+  text-decoration: none;
 }
