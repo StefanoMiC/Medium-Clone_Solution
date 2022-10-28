@@ -5482,7 +5482,7 @@
 
     </main>
     <script>
-        function getRandomLetter() {
+        const getRandomLetter = function () {
 
             const gs = document.querySelectorAll("g[stroke-linecap=butt]")
             let random = Math.floor(Math.random() * gs.length)
@@ -5492,7 +5492,7 @@
 
         }
 
-        function changeLetterOpacity() {
+        const changeLetterOpacity = function () {
             let letter = getRandomLetter()
             let opacity = parseInt(letter.getAttribute("opacity"))
 
@@ -5503,29 +5503,31 @@
             }
         }
 
-        function fadeInOutLetters() {
+        const fadeInOutLetters = function () {
             setInterval(function () {
                 changeLetterOpacity()
-            }, 120)
+            }, 40)
         }
 
-        function getNavHeight() {
+        const calculateHeroMarginTop = function () {
             const nav = document.querySelector("nav")
-            return nav.getBoundingClientRect().height
+            const hero = document.querySelector(".hero")
+            hero.style.marginTop = nav.getBoundingClientRect().height + "px"
         }
 
         window.onload = function () {
             fadeInOutLetters()
-
-            const hero = document.querySelector(".hero")
-            hero.style.marginTop = getNavHeight() + "px"
+            calculateHeroMarginTop()
         }
 
         document.addEventListener("scroll", function (event) {
             const nav = document.querySelector("nav")
-            const navbarHeight = getNavHeight()
+            const hero = document.querySelector(".hero")
 
-            if (window.pageYOffset >= navbarHeight) {
+            const heroHeight = hero.offsetHeight
+
+
+            if (window.pageYOffset >= heroHeight - 80) { /* 80 is to make the change happen a little early on before the end of the hero section, no particular other reason why it's there (just like the original one) */
                 console.log("scrolled")
                 nav.classList.add("scrolled")
             }

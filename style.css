@@ -154,7 +154,7 @@ nav,
 section.trending {
   padding-top: 40px;
   padding-bottom: 16px;
-  min-height: 80vh;
+  min-height: 180vh;
 }
 section.trending .trending-title-section {
   margin-bottom: 10px;
