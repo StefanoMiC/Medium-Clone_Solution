@@ -5700,6 +5700,8 @@
 
     </main>
     <script>
+
+        // LETTER ANIMATIONS
         const getRandomLetter = function () {
 
             const gs = document.querySelectorAll("g[stroke-linecap=butt]")
@@ -5740,7 +5742,11 @@
             fadeInOutLetters()
             calculateHeroMarginTop()
         }
+        // END OF LETTER ANIMATIONS
 
+
+
+        // NAVBAR CHANGE EFFECT STARTS HERE
         document.addEventListener("scroll", function (event) {
             const nav = document.querySelector("nav")
             const hero = document.querySelector(".hero")
