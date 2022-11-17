@@ -219,6 +219,7 @@ nav,
   color: rgba(117, 117, 117, 1);
   font-size: 13px;
   line-height: 20px;
+  white-space: nowrap;
 }
 
 .bottom-info .dot {
@@ -319,6 +320,7 @@ section.wall .grid > .col-main {
   flex-shrink: 0;
   flex-basis: 100%;
   width: 100%;
+  overflow-x: auto;
 }
 
 @media screen and (max-width: 903px) {
@@ -329,6 +331,7 @@ section.wall .grid > .col-main {
   section.wall .grid > aside {
     order: -1;
     width: 100%;
+    margin-block-end: 24px;
   }
 }
 
@@ -366,11 +369,26 @@ section.wall .card {
 }
 
 section.wall .card .content {
-  flex: 1;
+  flex: 1 1 200px;
+  min-width: 200px;
 }
 
 section.wall .card .content + img {
-  width: 200px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 576px) {
+  section.wall .card .content + img {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 728px) {
+  section.wall .card .content + img {
+    width: 200px;
+    height: 134px;
+  }
 }
 
 section.wall .card .avatar-title {
@@ -396,6 +414,11 @@ section.wall .card p {
 
 section.wall .card .bottom-info {
   padding-top: 8px;
+}
+@media screen and (max-width: 575px) {
+  section.wall .card .bottom-info .badge {
+    display: none;
+  }
 }
 
 section.wall .card img[src$="star.svg"] {
